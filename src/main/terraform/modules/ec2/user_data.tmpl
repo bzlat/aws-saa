@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+sudo su
+yum update -y
+yum install -y httpd.x86_64
+
+echo "Hello Terraform World from $(hostname -f)" > /var/www/html/index.html
+
+systemctl enable httpd.service
+systemctl start httpd.service

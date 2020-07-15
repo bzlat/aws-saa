@@ -42,3 +42,8 @@ variable "sg_tags" {
   }
   type = map(string)
 }
+
+variable "aws_ec2_ssh_pubkey" {
+  description = "ecdsa ssh public key for connecting to the AWS EC2 instances"
+  type        = string
+}
